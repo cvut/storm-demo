@@ -16,14 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>storm</groupId>
-            <artifactId>storm</artifactId>
-            <version>0.9.0-rc3</version>
-        </dependency>
-        <dependency>
-            <groupId>storm</groupId>
+            <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
-            <version>0.9.0-rc3</version>
+            <version>0.9.1-incubating</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

@@ -36,7 +36,7 @@ public class WordCountTopology {
 
     public static class WordCount extends BaseBasicBolt {
 
-        Map<String, Integer> counts = new HashMap<String, Integer>();
+        Map<String, Integer> counts = new HashMap<>();
 
         @Override
         public void execute(Tuple tuple, BasicOutputCollector collector) {
