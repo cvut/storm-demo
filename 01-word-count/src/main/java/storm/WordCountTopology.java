@@ -1,4 +1,4 @@
-package storm.word.count;
+package storm;
 
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
