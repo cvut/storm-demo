@@ -35,7 +35,7 @@ import storm.util.StormRunner;
  */
 public class RollingTopWords {
 
-    private static final int DEFAULT_RUNTIME_IN_SECONDS = 60;
+    private static final int DEFAULT_RUNTIME_IN_SECONDS = 30;
     private static final int TOP_N = 5;
 
     private final TopologyBuilder builder;
