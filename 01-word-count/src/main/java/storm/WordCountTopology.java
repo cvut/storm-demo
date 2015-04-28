@@ -12,6 +12,7 @@ import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.log4j.Logger;
 
 public class WordCountTopology {
 
@@ -37,6 +38,7 @@ public class WordCountTopology {
     public static class WordCount extends BaseBasicBolt {
 
         Map<String, Integer> counts = new HashMap<>();
+        private static final Logger logger = Logger.getLogger(WordCount.class);
 
         @Override
         public void execute(Tuple tuple, BasicOutputCollector collector) {
@@ -47,6 +49,7 @@ public class WordCountTopology {
             }
             count++;
             counts.put(word, count);
+            logger.info("bolt " + word + " hash map size: " + counts.size() + " map: " + counts.toString());
             collector.emit(new Values(word, count));
         }
 
